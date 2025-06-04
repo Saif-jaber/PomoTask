@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PomoTask.com</title>
+    <link rel="stylesheet" href="CSS/timerpage.css">
 </head>
 <body>
-    
+    <main>
+        <h1>PomoTask</h1>
+        <div id="task-container"> 
+            <input type="text" name="Task" id="task-msg" readonly>
+        </div>
+
+        <input type="text" name="Timer" id="timer" value="25:00" readonly>
+        <h1>Work</h1>
+
+        <div id="cycles">
+            <div class="indicators" id="c1"></div>
+            <div class="indicators" id="c2"></div>
+            <div class="indicators" id="c3"></div>
+            <div class="indicators" id="c4"></div>
+        </div>
+
+       <div id="actions-container">
+        <button type="button" onclick=""><img src="Images/refresh-page-option.png" alt="refresh button icon"></button>
+        <button type="button" onclick=""><img src="Images/pause.png" alt="refresh button icon"></button>
+        <button type="button" onclick=""><img src="Images/add.png" alt="refresh button icon"></button>
+        <button type="button" onclick=""><img src="Images/minus.png" alt="refresh button icon"></button>
+
+       </div>
+
+    </main>
+    <script src="JavaScript/timerPage.js"></script>
 </body>
 </html>

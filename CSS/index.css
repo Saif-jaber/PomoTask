@@ -94,3 +94,123 @@ main input:focus{
     margin: auto;
 }
 
+
+/* Light Theme */
+body.light {
+    background-color: white;
+}
+
+body.light header,
+body.light main h1 {
+    color: black;
+}
+
+body.light main input {
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+}
+
+body.light input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset !important;
+    -webkit-text-fill-color: black !important;
+}
+
+/* Theme toggle container */
+#theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+}
+
+/* Toggle switch style */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;       /* Increased from 50px */
+    height: 38px;      /* Increased from 28px */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 0.4s;
+}
+
+.slider:before {
+    content: "☾"; /* Moon icon */
+    position: absolute;
+    height: 30px;       /* Larger knob */
+    width: 30px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 18px;    /* Bigger icon */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: transform 0.4s ease;
+}
+
+.switch input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(32px); /* New offset to match size */
+    content: "☀";
+}
+
+
+/* Checked */
+.switch input:checked + .slider {
+    background-color: #2196F3;
+}
+
+
+
+/* Smooth theme transition */
+body, input, header, main h1 {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
