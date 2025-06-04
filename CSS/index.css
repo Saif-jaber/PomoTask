@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin:0;
+}
+
+body{
+    background-color: black;
+    overflow: hidden;
+    display: flex;                  /* Added */
+    justify-content: center;        /* Added */
+    align-items: center;            /* Added */
+    height: 100vh;                  /* Ensure full height */
+}
+
+section{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 6rem;
+}
+
+main h1{
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 3.4rem;
+}
+
+main input{
+    width: 40rem;
+    height: 2.5rem;
+    background-color: black;
+    color: rgb(249, 249, 249);
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    border: 3px solid white;
+    margin: 1rem;
+    font-size: 30px;
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px black inset !important;
+    -webkit-text-fill-color: white !important;
+    font-size: 30px !important;
+    border-radius: 4rem;
+}
+
+
+main input:focus{
+    border-color: white;
+    border-width: 3px;
+    outline: none;
+}
+
+#input-container{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#input-container button{
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 100%;
+    aspect-ratio: 1;
+    position: absolute;
+    right: 23px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    transition: ease-in-out 0.3s;    
+}
+
+#input-container button:hover{
+    background-color: rgb(255, 169, 47);
+    box-shadow: 0 0 50px rgb(255, 196, 3);
+    transition: ease-in-out 0.3s;
+}
+
+#input-container button img{
+    width: 30px;
+    height: fit-content;
+    margin: auto;
+}
+
